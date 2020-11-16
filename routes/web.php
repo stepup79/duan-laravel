@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('xin-chao', 'ExampleController@hello');
+Route::get('tam-biet', 'ExampleController@goodbye');
+
+Route::get('gioi-thieu', 'ExampleController@gioithieu');
