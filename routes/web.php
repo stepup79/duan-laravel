@@ -19,3 +19,5 @@ Route::get('xin-chao', 'ExampleController@hello');
 Route::get('tam-biet', 'ExampleController@goodbye');
 
 Route::get('gioi-thieu', 'ExampleController@gioithieu');
+Route::get('ds-nhanvien', 'ExampleController@danhsachnhanvien');
+
