@@ -21,7 +21,7 @@ class CreatePalChudeTable extends Migration
             $table->timestamp('cd_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Thời điểm cập nhật # Thời điểm cập nhật chủ đề gần nhất');
             $table->tinyInteger('cd_trangThai')->default('2')->comment('Trạng thái # Trạng thái chủ đề: 1-khóa, 2-khả dụng');
         
-            $table->unique(['cd_ma']);
+            $table->unique(['cd_ten']);
         });
         DB::statement("ALTER TABLE `pal_chude` comment 'Chủ đề # Chủ đề: cưới, sinh nhật, chúc mừng, chia buồn,...'");
     }

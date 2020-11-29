@@ -22,7 +22,7 @@ class CreatePalQuyenTable extends Migration
             $table->timestamp('q_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Thời điểm cập nhật # Thời điểm cập nhật quyền gần nhất');
             $table->tinyInteger('q_trangThai')->default('2')->comment('Trạng thái # Trạng thái quyền: 1-khóa, 2-khả dụng');
         
-            $table->unique(['q_ma']);
+            $table->unique(['q_ten']);
         });
         DB::statement("ALTER TABLE `pal_quyen` comment 'Quyền # Các quyền quản lý'");
     }

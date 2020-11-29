@@ -15,7 +15,7 @@ class CreatePalNhacungcapTable extends Migration
     {
         Schema::create('pal_nhacungcap', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->unsignedSmallInteger('ncc_ma')->autoIncrement()->comment('Mã nhà cung cấp, 1-Tự tạo');
+            $table->smallIncrements('ncc_ma')->comment('Mã nhà cung cấp, 1-Tự tạo');
             $table->string('ncc_ten', 100)->comment('Tên nhà cung cấp # Tên nhà cung cấp');
             $table->string('ncc_daiDien', 100)->comment('Đại diện # Người đại diện');
             $table->string('ncc_diaChi', 191)->comment('Địa chỉ # Địa chỉ');
@@ -26,8 +26,7 @@ class CreatePalNhacungcapTable extends Migration
             $table->tinyInteger('ncc_trangThai')->default('2')->comment('Trạng thái # Trạng thái nhà cung cấp: 1-khóa, 2-khả dụng');
             $table->unsignedSmallInteger('xx_ma')->comment('Xuất xứ # xx_ma # xx_ten # Mã xuất xứ');
 
-            $table->unique(['ncc_ma']);
-            $table->unique(['xx_ma']);
+            $table->unique(['ncc_ten']);
             $table->foreign('xx_ma') //cột khóa ngoại là cột `xx_ma` trong table `nhacungcap`
                 ->references('xx_ma')->on('pal_xuatxu'); //cột sẽ tham chiếu đến là cột `xx_ma` trong table `xuatxu` 
         });

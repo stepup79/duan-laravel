@@ -21,7 +21,7 @@ class CreatePalMauTable extends Migration
             $table->timestamp('m_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Thời điểm cập nhật # Thời điểm cập nhật màu gần nhất');
             $table->tinyInteger('m_trangThai')->default('2')->comment('Trạng thái # Trạng thái màu sản phẩm: 1-khóa, 2-khả dụng');
         
-            $table->unique(['m_ma']);
+            $table->unique(['m_ten']);
         });
         DB::statement("ALTER TABLE `pal_mau` comment 'Màu sắc # Màu sản phẩm'");
     }

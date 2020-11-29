@@ -15,22 +15,20 @@ class CreatePalKhachhangTable extends Migration
     {
         Schema::create('pal_khachhang', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->unsignedBigInteger('kh_ma')->autoIncrement()->comment('Mã khách hàng');
+            $table->bigIncrements('kh_ma')->comment('Mã khách hàng');
             $table->string('kh_taiKhoan', 50)->comment('Tài khoản # Tài khoản');
             $table->string('kh_matKhau', 191)->comment('Mật khẩu # Mật khẩu');
             $table->string('kh_hoTen', 100)->comment('Họ tên # Họ tên');
-            $table->tinyInteger('kh_gioiTinh')->default('1')->comment('Giới tính # Giới tính: 0-Nữ, 1-Nam, 2-Khác');
+            $table->unsignedTinyInteger('kh_gioiTinh')->default('1')->comment('Giới tính # Giới tính: 0-Nữ, 1-Nam, 2-Khác');
             $table->string('kh_email', 100)->comment('Email # Email');
             $table->dateTime('kh_ngaySinh')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Ngày sinh # Ngày sinh');
             $table->string('kh_diaChi', 191)->default(NULL)->comment('Địa chỉ # Địa chỉ');
             $table->string('kh_dienThoai', 11)->default(NULL)->comment('Điện thoại # Điện thoại');
             $table->timestamp('kh_taoMoi')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Thời điểm tạo # Thời điểm đầu tiên tạo khách hàng');
             $table->timestamp('kh_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Thời điểm cập nhật # Thời điểm cập nhật khách hàng gần nhất');
-            $table->tinyInteger('kh_trangThai')->default('3')->comment('Trạng thái # Trạng thái khách hàng: 1-khóa, 2-khả dụng, 3-chưa kích hoạt');
+            $table->unsignedTinyInteger('kh_trangThai')->default('3')->comment('Trạng thái # Trạng thái khách hàng: 1-khóa, 2-khả dụng, 3-chưa kích hoạt');
 
-            $table->unique(['kh_ma']);
-            $table->unique(['kh_gioiTinh']);
-            $table->unique(['kh_trangThai']);
+            $table->unique(['kh_taiKhoan']);
         });
         DB::statement("ALTER TABLE `pal_khachhang` comment 'Khách hàng # Khách hàng'");
     }
