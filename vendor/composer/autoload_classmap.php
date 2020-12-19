@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ChudeTableSeeder' => $baseDir . '/database/seeds/ChudeTableSeeder.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'CreatePalChitietdonhangTable' => $baseDir . '/database/migrations/2020_11_29_133758_create_pal_chitietdonhang_table.php',
     'CreatePalChitietnhapTable' => $baseDir . '/database/migrations/2020_11_29_150136_create_pal_chitietnhap_table.php',
@@ -104,6 +105,9 @@ return array(
     'Hamcrest\\Type\\IsString' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+    'KhachhangTableSeeder' => $baseDir . '/database/seeds/KhachhangTableSeeder.php',
+    'LoaiTableSeeder' => $baseDir . '/database/seeds/LoaiTableSeeder.php',
+    'MauTableSeeder' => $baseDir . '/database/seeds/MauTableSeeder.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -486,6 +490,7 @@ return array(
     'PHP_Token_XOR_EQUAL' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD_FROM' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
+    'SanphamTableSeeder' => $baseDir . '/database/seeds/SanphamTableSeeder.php',
     'SebastianBergmann\\CodeCoverage\\CodeCoverage' => $vendorDir . '/phpunit/php-code-coverage/src/CodeCoverage.php',
     'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => $vendorDir . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
     'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => $vendorDir . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -567,4 +572,7 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'ThanhToanTableSeeder' => $baseDir . '/database/seeds/ThanhToanTableSeeder.php',
+    'VanchuyenTableSeeder' => $baseDir . '/database/seeds/VanchuyenTableSeeder.php',
+    'XuatxuTableSeeder' => $baseDir . '/database/seeds/XuatxuTableSeeder.php',
 );

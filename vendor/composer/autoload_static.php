@@ -289,6 +289,7 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
     );
 
     public static $classMap = array (
+        'ChudeTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChudeTableSeeder.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'CreatePalChitietdonhangTable' => __DIR__ . '/../..' . '/database/migrations/2020_11_29_133758_create_pal_chitietdonhang_table.php',
         'CreatePalChitietnhapTable' => __DIR__ . '/../..' . '/database/migrations/2020_11_29_150136_create_pal_chitietnhap_table.php',
@@ -387,6 +388,9 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'KhachhangTableSeeder' => __DIR__ . '/../..' . '/database/seeds/KhachhangTableSeeder.php',
+        'LoaiTableSeeder' => __DIR__ . '/../..' . '/database/seeds/LoaiTableSeeder.php',
+        'MauTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MauTableSeeder.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -769,6 +773,7 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'SanphamTableSeeder' => __DIR__ . '/../..' . '/database/seeds/SanphamTableSeeder.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -850,6 +855,9 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'ThanhToanTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ThanhToanTableSeeder.php',
+        'VanchuyenTableSeeder' => __DIR__ . '/../..' . '/database/seeds/VanchuyenTableSeeder.php',
+        'XuatxuTableSeeder' => __DIR__ . '/../..' . '/database/seeds/XuatxuTableSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
