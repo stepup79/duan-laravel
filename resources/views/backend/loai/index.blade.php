@@ -5,8 +5,25 @@
 @endsection
 
 @section('content')
+<!-- Đây là div hiển thị Kết quả (thành công, thất bại) sau khi thực hiện các chức năng Thêm, Sửa, Xóa.
+- Div này chỉ hiển thị khi trong Session có các key `alert-*` từ Controller trả về. 
+- Sử dụng các class của Bootstrap "danger", "warning", "success", "info" để hiển thị màu cho đúng với trạng thái kết quả.
+-->
+<div class="flash-message">
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+      @if(Session::has('alert-' . $msg))
+      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+      @endif
+    @endforeach
+</div>
+
 <h1>Danh sách table Loại</h1>
-<a class="btn btn-primary" href="{{ route('admin.loai.create') }}">Thêm mới</a>
+<!-- Tạo nút Thêm mới loại sản phẩm 
+- Theo quy ước, các route đã được đăng ký trong file `web.php` đều phải được đặt tên để dễ dàng bảo trì code sau này.
+- Đường dẫn URL là đường dẫn được tạo ra bằng route có tên `loai.create`
+- Sẽ có dạng http://tenmiencuaban.com/admin/loai/create
+-->
+<a href="{{ route('admin.loai.create') }}" class="btn btn-primary">Thêm mới</a>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -29,7 +46,7 @@
                 <form method="POST" action="{{ route('admin.loai.destroy', ['id' => $loai->l_ma]) }}">
                     <input type="hidden" name="_method" value="DELETE"/>
                     {{ csrf_field() }}
-                    <button class="btn btn-danger" type="submit">Xóa</button>
+                    <button type="submit" class="btn btn-danger">Xóa</button>
                 </form>
             </td>
         </tr>

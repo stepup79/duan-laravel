@@ -108,6 +108,7 @@ return array(
     'KhachhangTableSeeder' => $baseDir . '/database/seeds/KhachhangTableSeeder.php',
     'LoaiTableSeeder' => $baseDir . '/database/seeds/LoaiTableSeeder.php',
     'MauTableSeeder' => $baseDir . '/database/seeds/MauTableSeeder.php',
+    'Normalizer' => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',

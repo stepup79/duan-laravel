@@ -12,6 +12,16 @@
 @endsection
 
 @section('content')
+@if ($errors->any())
+<div class="alert alert-danger">
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</div>
+@endif
+
 <h1>Thêm sản phẩm</h1>
 <form name="frmCreate" id="frmCreate" method="POST" action="{{ route('admin.sanpham.store') }}" enctype="multipart/form-data">
     {{ csrf_field() }}
@@ -27,10 +37,14 @@
         <label for="sp_giaBan">Giá bán</label>
         <input type="text" class="form-control" name="sp_giaBan" id="sp_giaBan" value="{{ old('sp_giaBan') }}">
     </div>
-    <!-- <div class="form-group">
-        <label for="sp_hinh">Hình</label>
-        <input type="text" class="form-control" name="sp_hinh" id="sp_hinh" value="{{ old('sp_hinh') }}">
-    </div> -->
+    <div class="form-group">
+        <label for="sp_taoMoi">Ngày tạo mới</label>
+        <input type="text" class="form-control" name="sp_taoMoi" id="sp_taoMoi" value="{{ old('sp_taoMoi') }}">
+    </div>
+    <div class="form-group">
+        <label for="sp_capNhat">Ngày cập nhật</label>
+        <input type="text" class="form-control" name="sp_capNhat" id="sp_capNhat" value="{{ old('sp_capNhat') }}">
+    </div>
     <div class="form-group">
         <label for="sp_thongTin">Thông tin</label>
         <input type="text" class="form-control" name="sp_thongTin" id="sp_thongTin" value="{{ old('sp_thongTin') }}">
@@ -56,10 +70,16 @@
     </div>
     <div class="form-group">
         <div class="file-loading">
-            <label for="sp_hinh">Hình</label>
+            <label for="sp_hinh">Hình đại diện</label>
             <input type="file" name="sp_hinh" id="sp_hinh">
         </div>
     </div>
+    <div class="form-group">
+        <div class="file-loading">
+            <label>Hình ảnh liên quan sản phẩm</label>
+            <input id="sp_hinhanhlienquan" type="file" name="sp_hinhanhlienquan[]" multiple>
+        </div>
+  </div>
     <button type="submit" class="btn btn-success">Lưu</button>
 </form>
 @endsection
@@ -82,6 +102,82 @@ $(function() {
         fileType: "any",
         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
         overwriteInitial: false
+    });
+    // Ô nhập liệu cho phép chọn nhiều hình ảnh cùng lúc (các hình ảnh liên quan đến sản phẩm)
+    $("#sp_hinhanhlienquan").fileinput({
+        theme: 'fas',
+        showUpload: false,
+        showCaption: false,
+        browseClass: "btn btn-primary btn-lg",
+        fileType: "any",
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+        overwriteInitial: false,
+        allowedFileExtensions: ["jpg", "gif", "png", "txt"]
+    });
+});
+</script>
+
+<!-- SCRIPTS dành cho thư viện bootstrap-fileinput -->
+<script src="{{ asset('vendor/input-mask/jquery.inputmask.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('vendor/input-mask/bindings/inputmask.binding.js') }}" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+    // Gắn mặt nạ nhập liệu cho các ô nhập liệu Giá gốc
+    $('#sp_giaGoc').inputmask({
+      alias: 'currency',
+      positionCaretOnClick: "radixFocus",
+      radixPoint: ".",
+      _radixDance: true,
+      numericInput: true,
+      groupSeparator: ",",
+      suffix: ' vnđ',
+      min: 0,         // 0 ngàn
+      max: 100000000, // 1 trăm triệu
+      autoUnmask: true,
+      removeMaskOnSubmit: true,
+      unmaskAsNumber: true,
+      inputtype: 'text',
+      placeholder: "0",
+      definitions: {
+        "0": {
+          validator: "[0-9\uFF11-\uFF19]"
+        }
+      }
+    });
+
+    // Gắn mặt nạ nhập liệu cho các ô nhập liệu Giá bán
+    $('#sp_giaBan').inputmask({
+      alias: 'currency',
+      positionCaretOnClick: "radixFocus",
+      radixPoint: ".",
+      _radixDance: true,
+      numericInput: true,
+      groupSeparator: ",",
+      suffix: ' vnđ',
+      min: 0,         // 0 ngàn
+      max: 100000000, // 1 trăm triệu
+      autoUnmask: true,
+      removeMaskOnSubmit: true,
+      unmaskAsNumber: true,
+      inputtype: 'text',
+      placeholder: "0",
+      definitions: {
+        "0": {
+          validator: "[0-9\uFF11-\uFF19]"
+        }
+      }
+    });
+    // Gắn mặt nạ nhập liệu cho các ô nhập liệu Ngày tạo mới
+    $('#sp_taoMoi').inputmask({
+      alias: 'datetime',
+      inputFormat: 'yyyy-mm-dd' // Định dạng Năm-Tháng-Ngày
+    });
+
+    // Gắn mặt nạ nhập liệu cho các ô nhập liệu Ngày cập nhật
+    $('#sp_capNhat').inputmask({
+      alias: 'datetime',
+      inputFormat: 'yyyy-mm-dd' // Định dạng Năm-Tháng-Ngày
     });
 });
 </script>

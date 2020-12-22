@@ -39,4 +39,6 @@ Route::put('admin/loai/edit/{id}', 'Backend\LoaiController@update') ->name('admi
 Route::delete('admin/loai/delete/{id}', 'Backend\LoaiController@destroy') ->name('admin.loai.destroy');
 
 //Tạo các route CRUD
+Route::get('admin/sanpham/print', 'Backend\SanPhamController@print') ->name('admin.sanpham.print');
+Route::get('admin/sanpham/excel', 'Backend\SanPhamController@excel') ->name('admin.sanpham.excel');
 Route::resource('/admin/sanpham', 'Backend\SanPhamController', ['as' => 'admin']);//đặt tên admin

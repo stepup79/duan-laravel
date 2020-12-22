@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Loai;
 use Carbon\Carbon;
 use Validator;
+use Session;
 use App\Http\Requests\LoaiCreateRequest;
 
 class LoaiController extends Controller
@@ -94,7 +95,7 @@ class LoaiController extends Controller
     {
         $loai = Loai::find($id);
 
-        return view('admin.loai.edit')
+        return view('backend.loai.edit')
             ->with('loai', $loai);
     }
 
@@ -107,7 +108,19 @@ class LoaiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $loai = Loai::find($id);
+
+        $loai->l_ten = $request->l_ten;
+        $loai->l_taoMoi = $request->l_taoMoi;
+        $loai->l_capNhat = $request->l_capNhat;
+        $loai->l_trangThai = $request->l_trangThai;
+        $loai->save();
+
+        // Hiển thị câu thông báo 1 lần (Flash session)
+        Session::flash('alert-info', 'Cập nhật thành công ^^~!!!');
+        
+        // Điều hướng về trang index
+        return redirect()->route('admin.loai.index');
     }
 
     /**
@@ -118,6 +131,13 @@ class LoaiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $loai = Loai::find($id);
+
+        $loai->delete();
+        // Hiển thị câu thông báo 1 lần (Flash session)
+        Session::flash('alert-info', 'Xóa loại sản phẩm thành công ^^~!!!');
+
+        // Điều hướng về trang index
+        return redirect()->route('admin.loai.index');
     }
 }
