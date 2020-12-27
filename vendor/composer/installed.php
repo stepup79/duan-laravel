@@ -6,11 +6,20 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'c73dcac1a50e8403c419eb30537ee161049fad40',
+    'reference' => '424a8bed41020a6c969cec27230e810f24418f82',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'barryvdh/laravel-dompdf' => 
+    array (
+      'pretty_version' => 'v0.8.7',
+      'version' => '0.8.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '30310e0a675462bf2aa9d448c8dcbf57fbcc517d',
+    ),
     'cordoval/hamcrest-php' => 
     array (
       'replaced' => 
@@ -51,6 +60,15 @@
       array (
       ),
       'reference' => 'e864bbf5904cb8f5bb334f99209b48018522f042',
+    ),
+    'dompdf/dompdf' => 
+    array (
+      'pretty_version' => 'v0.8.6',
+      'version' => '0.8.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'db91d81866c69a42dad1d2926f61515a1e3f42c5',
     ),
     'egulias/email-validator' => 
     array (
@@ -316,7 +334,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'c73dcac1a50e8403c419eb30537ee161049fad40',
+      'reference' => '424a8bed41020a6c969cec27230e810f24418f82',
     ),
     'league/flysystem' => 
     array (
@@ -438,6 +456,24 @@
       array (
       ),
       'reference' => '84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95',
+    ),
+    'phenx/php-font-lib' => 
+    array (
+      'pretty_version' => '0.5.2',
+      'version' => '0.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
+    ),
+    'phenx/php-svg-lib' => 
+    array (
+      'pretty_version' => 'v0.3.3',
+      'version' => '0.3.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -631,6 +667,15 @@
       array (
         0 => '3.9.3',
       ),
+    ),
+    'sabberworm/php-css-parser' => 
+    array (
+      'pretty_version' => '8.3.1',
+      'version' => '8.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
     ),
     'sebastian/code-unit-reverse-lookup' => 
     array (

@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Validator;
 use Session;
 use App\Http\Requests\LoaiCreateRequest;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class LoaiController extends Controller
 {
@@ -139,5 +140,23 @@ class LoaiController extends Controller
 
         // Điều hướng về trang index
         return redirect()->route('admin.loai.index');
+    }
+
+    /**
+     * Action xuất PDF
+     */
+    public function pdf()
+    {
+        $ds_loai = Loai::all();
+        $data = [
+            'danhsachloai' => $ds_loai
+        ];
+        /* Code dành cho việc debug
+        - Khi debug cần hiển thị view để xem trước khi Export PDF
+        */
+        // return view('backend.loai.pdf')
+        //     ->with('danhsachloai', $ds_loai);
+        $pdf = PDF::loadView('backend.loai.pdf', $data);
+        return $pdf->download('DanhMucLoai.pdf');
     }
 }

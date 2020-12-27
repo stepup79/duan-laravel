@@ -17,13 +17,15 @@
     @endforeach
 </div>
 
-<h1>Danh sách table Loại</h1>
 <!-- Tạo nút Thêm mới loại sản phẩm 
 - Theo quy ước, các route đã được đăng ký trong file `web.php` đều phải được đặt tên để dễ dàng bảo trì code sau này.
 - Đường dẫn URL là đường dẫn được tạo ra bằng route có tên `loai.create`
 - Sẽ có dạng http://tenmiencuaban.com/admin/loai/create
 -->
 <a href="{{ route('admin.loai.create') }}" class="btn btn-primary">Thêm mới</a>
+<!-- Tạo nút xuất ra bản in file PDF trên web -->
+<a class="btn btn-outline-danger" href="{{ route('admin.loai.pdf') }}">In PDF</a>
+
 <table class="table table-striped">
     <thead>
         <tr>

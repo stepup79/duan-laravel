@@ -120,6 +120,7 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Svg\\' => 4,
         ),
         'R' => 
         array (
@@ -153,6 +154,7 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         ),
         'F' => 
         array (
+            'FontLib\\' => 8,
             'Faker\\' => 6,
         ),
         'E' => 
@@ -162,6 +164,7 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'D' => 
         array (
             'Dotenv\\' => 7,
+            'Dompdf\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Common\\Lexer\\' => 22,
@@ -172,6 +175,10 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         array (
             'Cron\\' => 5,
             'Complex\\' => 8,
+        ),
+        'B' => 
+        array (
+            'Barryvdh\\DomPDF\\' => 16,
         ),
         'A' => 
         array (
@@ -282,6 +289,10 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Svg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -343,6 +354,10 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
         ),
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
@@ -354,6 +369,10 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -383,6 +402,10 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         array (
             0 => __DIR__ . '/..' . '/markbaker/complex/classes/src',
         ),
+        'Barryvdh\\DomPDF\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -399,6 +422,13 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
             'UpdateHelper\\' => 
             array (
                 0 => __DIR__ . '/..' . '/kylekatarnls/update-helper/src',
+            ),
+        ),
+        'S' => 
+        array (
+            'Sabberworm\\CSS' => 
+            array (
+                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
             ),
         ),
         'P' => 
@@ -418,6 +448,9 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
     );
 
     public static $classMap = array (
+        'ChitietdonhangTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChitietdonhangTableSeeder.php',
+        'ChitietnhapTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChitietnhapTableSeeder.php',
+        'ChudeSanphamTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChudeSanphamTableSeeder.php',
         'ChudeTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChudeTableSeeder.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'CreatePalChitietdonhangTable' => __DIR__ . '/../..' . '/database/migrations/2020_11_29_133758_create_pal_chitietdonhang_table.php',
@@ -446,9 +479,17 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
+        'DonhangTableSeeder' => __DIR__ . '/../..' . '/database/seeds/DonhangTableSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
+        'GopyTableSeeder' => __DIR__ . '/../..' . '/database/seeds/GopyTableSeeder.php',
+        'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
+        'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
+        'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
+        'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
+        'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -517,9 +558,16 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'HoadonleTableSeeder' => __DIR__ . '/../..' . '/database/seeds/HoadonleTableSeeder.php',
+        'HoadonsiTableSeeder' => __DIR__ . '/../..' . '/database/seeds/HoadonsiTableSeeder.php',
         'KhachhangTableSeeder' => __DIR__ . '/../..' . '/database/seeds/KhachhangTableSeeder.php',
+        'KhuyenmaiSanphamTableSeeder' => __DIR__ . '/../..' . '/database/seeds/KhuyenmaiSanphamTableSeeder.php',
+        'KhuyenmaiTableSeeder' => __DIR__ . '/../..' . '/database/seeds/KhuyenmaiTableSeeder.php',
         'LoaiTableSeeder' => __DIR__ . '/../..' . '/database/seeds/LoaiTableSeeder.php',
+        'MauSanphamTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MauSanphamTableSeeder.php',
         'MauTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MauTableSeeder.php',
+        'NhacungcapTableSeeder' => __DIR__ . '/../..' . '/database/seeds/NhacungcapTableSeeder.php',
+        'NhanvienTableSeeder' => __DIR__ . '/../..' . '/database/seeds/NhanvienTableSeeder.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
@@ -903,6 +951,8 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PhieunhapTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PhieunhapTableSeeder.php',
+        'QuyenTableSeeder' => __DIR__ . '/../..' . '/database/seeds/QuyenTableSeeder.php',
         'SanphamTableSeeder' => __DIR__ . '/../..' . '/database/seeds/SanphamTableSeeder.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
@@ -985,7 +1035,7 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'ThanhToanTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ThanhToanTableSeeder.php',
+        'ThanhToanTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ThanhtoanTableSeeder.php',
         'VanchuyenTableSeeder' => __DIR__ . '/../..' . '/database/seeds/VanchuyenTableSeeder.php',
         'XuatxuTableSeeder' => __DIR__ . '/../..' . '/database/seeds/XuatxuTableSeeder.php',
     );

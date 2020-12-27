@@ -65,9 +65,16 @@ return [
     */
 
     'providers' => [
+        // Không sử dụng model `User` (mặc định của Laravel)
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\User::class,
+        // ],
+
+        // Thay thế việc Xác thực tài khoản bằng model `Nhanvien`
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
+            'driver' => 'custom',
+            'model' => App\NhanVien::class,
         ],
 
         // 'users' => [

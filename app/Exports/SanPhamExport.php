@@ -44,7 +44,7 @@ class SanPhamExport implements FromView, WithDrawings, WithEvents, ShouldAutoSiz
         $drawingLogo->setPath(public_path('storage/logo.jpg'));
         $drawingLogo->setHeight(90);
         $drawingLogo->setCoordinates('C4');
-        $offsetX = 40; //pixels
+        $offsetX = 90; //pixels
         $drawingLogo->setOffsetX($offsetX); //pixels
         $arrDrawings[] = $drawingLogo;
 
@@ -59,8 +59,8 @@ class SanPhamExport implements FromView, WithDrawings, WithEvents, ShouldAutoSiz
             $drawing->setName($sp->sp_ten);
             $drawing->setDescription($sp->sp_thongTin);
             $drawing->setPath(public_path('storage/photos/' . $sp->sp_hinh));
-            $drawing->setHeight(40);
-            $drawing->setWidth(40);
+            $drawing->setHeight(60);
+            $drawing->setWidth(60);
             $drawing->setCoordinates('B' . ($startRow + $index));
             $arrDrawings[] = $drawing;
         }

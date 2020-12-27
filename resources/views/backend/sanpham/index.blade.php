@@ -36,6 +36,9 @@
 <a class="btn btn-outline-primary" href="{{ route('admin.sanpham.print') }}">In ấn</a>
 <!-- Tạo nút xuất ra bản in file Excel trên web -->
 <a class="btn btn-outline-success" href="{{ route('admin.sanpham.excel') }}">In Excel</a>
+<!-- Tạo nút xuất ra bản in file PDF trên web -->
+<a class="btn btn-outline-danger" href="{{ route('admin.sanpham.pdf') }}">In PDF</a>
+
 <!-- Tạo table hiển thị danh sách các sản phẩm -->
 <table class="table table-striped">
     <tr>
