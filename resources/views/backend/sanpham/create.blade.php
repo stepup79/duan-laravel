@@ -117,7 +117,7 @@ $(function() {
 });
 </script>
 
-<!-- SCRIPTS dành cho thư viện bootstrap-fileinput -->
+<!-- SCRIPTS dành cho thư viện input-mask -->
 <script src="{{ asset('vendor/input-mask/jquery.inputmask.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('vendor/input-mask/bindings/inputmask.binding.js') }}" type="text/javascript"></script>
 
