@@ -21,7 +21,7 @@ class MauSanphamTableSeeder extends Seeder
         for ($i=1; $i <= 2; $i++) {
             $today = new DateTime();
             array_push($list, [
-                'sp_ma'                   => $i,
+                'sp_ma'                   => 29,
                 'm_ma'                    => $i,
                 'msp_soluong'             => $i
             ]);

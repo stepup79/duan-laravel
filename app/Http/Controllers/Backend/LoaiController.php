@@ -20,7 +20,8 @@ class LoaiController extends Controller
      */
     public function index()
     {
-        $dataLoai = Loai::all();
+        // $dataLoai = Loai::all();
+        $dataLoai = Loai::paginate(3);
             return view('backend.loai.index')
                 ->with('dataLoai', $dataLoai);
     }

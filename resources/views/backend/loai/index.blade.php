@@ -55,4 +55,5 @@
         @endforeach
     </tbody>
 </table>
+{{ $dataLoai->links() }}
 @endsection

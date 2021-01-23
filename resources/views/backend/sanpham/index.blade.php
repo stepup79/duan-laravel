@@ -97,5 +97,5 @@
     </tr>
     @endforeach
 </table>
-
+{{ $dsSanPham->links() }}
 @endsection

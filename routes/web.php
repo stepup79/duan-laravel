@@ -55,4 +55,21 @@ Route::get('/testbcrypt', function () {
     return bcrypt('123456');
 });
 
+Route::get('/', 'Frontend\FrontendController@index')->name('frontend.home');
+
+Route::get('/lien-he', 'Frontend\FrontendController@contact')->name('frontend.pages.contact');
+Route::post('/lien-he/goi-loi-nhan', 'Frontend\FrontendController@sendMailContactForm')->name('frontend.pages.contact.sendMailContactForm');
+
+// route đa ngôn ngữ
+Route::get('setLocale/{locale}', function ($locale) {
+    if (in_array($locale, Config::get('app.locales'))) {
+      Session::put('locale', $locale);
+    }
+    return redirect()->back();
+})->name('app.setLocale');
+
+// báo cáo đơn hàng
+Route::get('/admin/baocao/donhang', 'Backend\BaoCaoController@donhang')->name('backend.baocao.donhang');
+Route::get('/admin/baocao/donhang/data', 'Backend\BaoCaoController@donhangData')->name('backend.baocao.donhang.data');
+
 

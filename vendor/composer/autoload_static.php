@@ -1035,7 +1035,7 @@ class ComposerStaticInit5764b5218b64b59a882f0187f315f09e
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'ThanhToanTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ThanhtoanTableSeeder.php',
+        'ThanhToanTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ThanhToanTableSeeder.php',
         'VanchuyenTableSeeder' => __DIR__ . '/../..' . '/database/seeds/VanchuyenTableSeeder.php',
         'XuatxuTableSeeder' => __DIR__ . '/../..' . '/database/seeds/XuatxuTableSeeder.php',
     );

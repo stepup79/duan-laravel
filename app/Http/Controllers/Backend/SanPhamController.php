@@ -24,7 +24,8 @@ class SanPhamController extends Controller
     public function index()
     {
         // Khi sử dụng MODEL phải use chúng
-        $dsSanPham = SanPham::all();
+        // $dsSanPham = SanPham::all();
+        $dsSanPham = SanPham::paginate(2);
         return view ('backend.sanpham.index')
             ->with('dsSanPham', $dsSanPham);
     }
